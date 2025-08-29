@@ -23,3 +23,11 @@ A REST API for processing an array of inputs and returning numbers, alphabets, s
 ```bash
 git clone https://github.com/Pran4th/bfhl-api.git
 cd bfhl-api
+
+# Deploy the API to Vercel
+vercel --prod
+
+# Test the API
+curl -X POST https://bfhl-<your-project>.vercel.app/bfhl \
+-H "Content-Type: application/json" \
+-d '{"data": ["a","1","334","4","R","$"]}'
